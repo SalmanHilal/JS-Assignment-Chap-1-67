@@ -61,10 +61,97 @@ document.write('Yah! i can write HTML content through JavaScript');
 var line = '▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬';
 alert(line)
 
-//Chapter 03
-//Task 01
+// Chapter 03
+// Task 01
 var age = prompt('Enter Age: ');
 alert('I am '+age+' years old')
+
+//Task 02
+var url_segment = window.location.href.split('/');
+alert(url_segment)
+var script_name = url_segment[url_segment.length - 1];
+if (localStorage[script_name]) {
+    localStorage[script_name] = parseInt(localStorage[script_name]) + 1;
+}
+else {
+    localStorage[script_name] = 1;
+}
+alert("You've visited this site "+ localStorage[script_name] + " times");
+
+//Task 03
+var birthYear = parseInt(prompt('Enter birth year: '));
+alert('My birth year is: '+birthYear+'\nDatatype of my declared variable is '+ typeof(birthYear))
+
+//Task 04
+vName = prompt('Enter Your Name: ')
+pTitle = prompt('Enter Product Name: ')
+qty = prompt('Enter Quantity: ')
+alert(vName+' ordered '+ qty+' '+pTitle+' on ABC clothing store')
+
+// Chapter 04
+//Task 01
+var a,b,c;
+
+//Task 02
+var a, _a, $a, AAA, studentClass;
+var 1_a, -a, @a, *a, var='a';
+
+//Task 03
+document.write('<h1>Rules for naming JS Variables</h1><p>Variable names can only contain alphabets, numbers, $ and _.For example $my_1stVariable<br>Variables must begin with a $ , _ or alphabet. For example $name, _name or name<br>Variable names are case sensitive.<br>Variable names should not be JS keyword.</p>')
+
+// Chapter 05
+//Task 01
+firstNum = parseInt(prompt('Enter First Name: '));
+secondNum = parseInt(prompt('Enter Second Name: '));
+result = firstNum + secondNum;
+document.write('Sum of '+firstNum+' + '+secondNum+' is '+ result);
+
+//Task 02
+firstNum = parseInt(prompt('Enter First Name: '));
+secondNum = parseInt(prompt('Enter Second Name: '));
+opr = prompt('Enter Operator: ');
+if(opr == '+'){
+	result = firstNum + secondNum;
+}else if(opr == '-'){
+	result = firstNum - secondNum;
+}else if(opr == '*'){
+	result = firstNum * secondNum;
+}else if(opr == '/'){
+	result = firstNum / secondNum;
+}else{
+	result = 'Invalid input!';
+}
+document.write('Result of '+firstNum+' '+opr+' '+secondNum+' is '+ result);
+
+//Task 03
+var variable;
+document.write('Value after variable declaration is '+variable);
+variable = 5;
+document.write('<br>Initial value: '+variable);
+variable = ++variable;
+document.write('<br>Value after increment: '+variable);
+variable = variable+1;
+document.write('<br>Value after addition: '+variable);
+variable = --variable;
+document.write('<br>Value after decrement: '+variable);
+variable = variable / 3;
+document.write('<br>The remainder is: '+variable);
+
+//Task 04
+var ticketPrice = parseInt(prompt('Enter ticket price: '));
+var ticketQty = parseInt(prompt('Enter ticket quantity: '));
+var billAmount = ticketPrice * ticketQty;
+document.write('Total cost to buy '+ticketQty+' to a funland is '+billAmount);
+
+//Task 05
+var no = parseInt(prompt('Generate number of: '));
+document.write('Table of '+no+'<br>')
+for(i=0;i<=10;i++){
+	result = i*no;
+	document.write(no+' x '+i+' = '+ result+'<br>');
+}
+
+
 
 
 
