@@ -17,7 +17,7 @@ alert('Happy Coding!')
 //Task 05 from console
 alert("Hello, i can run JS from my browser's console")
 
-//Chapter 02
+// Chapter 02
 //Task 01
 var username;
 
@@ -28,6 +28,43 @@ var myName = 'Salman Ahmed';
 var message;
 message = 'Hello World';
 alert(message)
+
+//Task 04
+var stName = prompt('Enter Name: ')
+alert(stName)
+var stAge = prompt('Enter Age: ')
+alert(stAge+' years old')
+var stCert = prompt('Enter Certificate: ')
+alert(stCert)
+
+//Task 05
+var str = "PIZZA";
+var string='';
+for(i=-3;i<=str.length;i++ ){
+	string += str+'\n';
+	str = str.substring(0, str.length - 1);
+}
+alert(string)
+
+//Task 06
+var email = prompt('Enter Email Address:')
+alert('My email address is: '+email)
+
+//Task 07
+var book = 'A smarter way to learn JavaScript';
+alert('I am trying to lern from book '+book)
+
+//Task 08
+document.write('Yah! i can write HTML content through JavaScript');
+
+//Task 09
+var line = '▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬';
+alert(line)
+
+//Chapter 03
+//Task 01
+var age = prompt('Enter Age: ');
+alert('I am '+age+' years old')
 
 
 
