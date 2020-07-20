@@ -151,6 +151,217 @@ for(i=0;i<=10;i++){
 	document.write(no+' x '+i+' = '+ result+'<br>');
 }
 
+//Task 06
+var getcel = parseFloat(prompt('Enter celcius: '))
+var fer = (getcel * 9 / 5) +32;
+document.write(getcel + ' is ' + fer + '<br>')
+var getfer = parseFloat(prompt('Enter Fahrenheit: '))
+var cel = (5/9) * (getfer-32);
+document.write(getfer + ' is ' + Math.round(cel))
+
+//Task 07
+var priceItem1 = parseInt(prompt('Enter Price of Item One: '));
+var qtyItem1 = parseInt(prompt('Enter Quantity of Item One: '));
+var priceItem2 = parseInt(prompt('Enter Price of Item Two: '));
+var qtyItem2 = parseInt(prompt('Enter Quantity of Item Two: '));
+var shipCharge = parseInt(prompt('Enter Shipping Charges: '));
+var total = (priceItem1 * qtyItem1) + (priceItem2 * qtyItem2) + shipCharge;
+document.write('<h1>Shopping Cart</h1>')
+document.write('<p>Price of item 1: '+ priceItem1 +'<br>')
+document.write('Quantity of item 1: '+ qtyItem1 +'<br>')
+document.write('Price of item 2: '+ priceItem2 +'<br>')
+document.write('Quantity of item 2: '+ qtyItem2 +'<br>')
+document.write('Shipping Charges: '+ shipCharge +'<br>')
+document.write('Total cost of your order is: '+ total +'</p>');
+
+//Task 08
+var totalMarks = parseFloat(prompt('Total Marks: '));
+var obtainMarks = parseFloat(prompt('Marks Obtained: '));
+var per =  (totalMarks*obtainMarks)/100;
+document.write('<h1>Mark Sheet</h1>')
+document.write('<p>Total Marks: '+ totalMarks +'<br>')
+document.write('Marks Obtained: '+ obtainMarks +'<br>')
+document.write('Percentage: '+ per +'%</p>');
+
+//Task 09
+var curr =  (10 * 104.80) + (25 * 28);
+document.write('<h1>Currency in PKR</h1>')
+document.write('<p>Total currency in PKR: '+ curr +'<p>')
+
+//Task 10
+var num = 10;
+var exp = (num + 5) * 10 / 2;
+document.write('Result is: ' + exp);
+
+//Task 11
+var cYear = parseFloat(prompt('Current year: '));
+var bYear = parseFloat(prompt('Birth year: '));
+var age =  cYear - bYear;
+document.write('<h1>Age Calculator</h1>')
+document.write('<p>Current year: '+ cYear +'<br>')
+document.write('Birth year: '+ bYear +'<br>')
+document.write('Age: '+ age +'</p>');
+
+//Task 12
+var favSnack = parseFloat(prompt('favorite snack: '));
+var cAge = parseFloat(prompt('current age: '));
+var mAge =  parseFloat(prompt('maximum age: '));
+var estAmount = parseFloat(prompt('estimated amount per day: '));
+var estItems = estAmount * (mAge - cAge);
+document.write('<h1>The Lifetime Supply Calculator</h1>')
+document.write('<p>Favorite snack: '+ favSnack +'<br>')
+document.write('Current age: '+ cAge +'<br>')
+document.write('Maximum age: '+ mAge +'<br>')
+document.write('Estimated amount per day: '+ estAmount +'<br>')
+document.write('You will need ' + estItems + ' to last you until the ripe old age of ' + mAge + ' </p>')
+
+// Chapter 06-09
+//Task 1
+var a = parseInt(prompt('Enter number: '));
+document.write('<h3>Result</h3>')
+document.write('<p>The value of a is: '+ a +'<br>')
+document.write('--------------------------- </p>')
+
+document.write('<p>The value of ++a is: '+ (++a) +'<br>')
+document.write('Now the value of a is: ' + a + '</p>')
+
+document.write('<p>The value of a++ is: '+ (a++) +'<br>')
+document.write('Now the value of a is: ' + a + '</p>')
+
+document.write('<p>The value of --a is: '+ (--a) +'<br>')
+document.write('Now the value of a is: ' + a + '</p>')
+
+document.write('<p>The value of a-- is: '+ (a--) +'<br>')
+document.write('Now the value of a is: ' + a + '</p>')
+
+//Task 2
+var a = 2, b = 1;
+var result = --a;
+document.write('<p>a is: '+ a +'<br>')
+document.write('b is: '+ b +'<br>')
+document.write('Result: ' + result + '</p>')
+
+var result = --a - --b;
+document.write('<p>a is: '+ a +'<br>')
+document.write('b is: '+ b +'<br>')
+document.write('Result: ' + result + '</p>')
+
+var result = --a - --b + ++b;
+document.write('<p>a is: '+ a +'<br>')
+document.write('b is: '+ b +'<br>')
+document.write('Result: ' + result + '</p>')
+
+var result = --a - --b + ++b + b--;
+document.write('<p>a is: '+ a +'<br>')
+document.write('b is: '+ b +'<br>')
+document.write('Result: ' + result + '</p>')
+
+//Task 3
+var name = prompt('Enter Name: ')
+alert('Welcome ' + name)
+
+//Task 5
+var no = parseInt(prompt('Generate number of: '));
+no = no?no:5;
+document.write('Table of '+no+'<br>')
+for(i=0;i<=10;i++){
+	result = i*no;
+	document.write(no+' x '+i+' = '+ result+'<br>');
+}
+
+//Task 6
+totalMarks = 100;
+sub1 = prompt('First subject name: ')?prompt('First subject name: '):'Subject 1';
+sub2 = prompt('Second subject name: ')?prompt('Second subject name: '):'Subject 2';
+sub3 = prompt('Third subject name: ')?prompt('Third subject name: '):'Subject 3';
+sub1_marks = parseFloat(prompt('Enter '+ sub1 +' marks: '))?parseFloat(prompt('Enter '+ sub1 +' marks: ')):0;
+sub2_marks = parseFloat(prompt('Enter '+ sub2 +' marks: '))?parseFloat(prompt('Enter '+ sub2 +' marks: ')):0;
+sub3_marks = parseFloat(prompt('Enter '+ sub3 +' marks: '))?parseFloat(prompt('Enter '+ sub3 +' marks: ')):0;
+sub1_per = (totalMarks*sub1_marks)/100;
+sub2_per = (totalMarks*sub2_marks)/100;
+sub3_per = (totalMarks*sub3_marks)/100;
+document.write('<table style="min-width:70%;"><tr style="text-align:left;"><th>Subjects</th><th>Total Marks</th><th>Obtained Marks</th><th>Percentage</th><tr><td>'+sub1+'</td><td>'+totalMarks+'</td><td>'+ sub1_marks +'</td><td>'+ sub1_per +'%</td></tr><tr><td>'+sub2+'</td><td>'+totalMarks+'</td><td>'+ sub2_marks +'</td><td>'+ sub2_per +'%</td></tr><tr><td>'+sub3+'</td><td>'+totalMarks+'</td><td>'+ sub3_marks +'</td><td>'+ sub3_per +'%</td></tr><tr><td></td><td><b>'+(totalMarks*3)+'</b></td><td><b>'+ (sub1_marks+sub2_marks+sub3_marks) +'</b></td><td><b>'+ ((sub1_per + sub2_per + sub3_per) / 3) +'%</b></td></tr></table>')
+
+// Chapter 09-11
+//Task 1
+city = prompt('Enter city name: ');
+if(city.toLowerCase() == 'karachi'){
+	alert('Welcome to city of lights')
+}
+
+//Task 2
+gender = prompt('Enter your gender: ');
+if(gender.toLowerCase() == 'male'){
+	alert('Good Morning Sir')
+}else if(gender.toLowerCase() == 'female'){
+	alert('Good Morning Ma’am')
+}
+
+//Task 3
+color = prompt('Enter color: ');
+if(color.toLowerCase() == 'red'){
+	alert('Must Stop')
+}else if(color.toLowerCase() == 'yellow'){
+	alert('Ready to move')
+}else if(color.toLowerCase() == 'green'){
+	alert('Move now')
+}else{
+	alert('Please enter one of the color of road traffic signal!')
+}
+
+//Task 4
+fuel = parseFloat(prompt('Enter remaining fuel: '));
+if(fuel < 0.25){
+	alert('Please refill the fuel in your car')
+}
+
+//Task 5
+var a = 4;
+if (++a === 5){
+alert("given condition for variable a is true");
+}
+
+var b = 82;
+if (b++ === 83){
+alert("given condition for variable b is true");
+}
+
+var c = 12;
+if (c++ === 13){
+alert("condition 1 is true");
+}
+if (c === 13){
+alert("condition 2 is true");
+}
+if (++c < 14){
+alert("condition 3 is true");
+}
+if(c === 14){
+alert("condition 4 is true");
+}
+
+var materialCost = 20000;
+var laborCost = 2000;
+var totalCost = materialCost + laborCost;
+if (totalCost === laborCost + materialCost){
+alert("The cost equals");
+}
+
+if (true){
+alert("True");
+}
+if (false){
+alert("False");
+}
+
+if("car" < "cat"){
+alert("car is smaller than cat");
+}
+
+
+
+
+
 
 
 
