@@ -10,36 +10,18 @@
 
 <script>
 
-//Task 6
-var totalMarks, obtainedMarks, per, grade, remarks;
-totalMarks = parseFloat(prompt('Enter total marks: '));
-obtainedMarks = parseFloat(prompt('Enter obtained marks: '));
-per = (totalMarks*obtainedMarks)/100;
-if(per >= 80){
-	grade = 'A-one';
-}else if(per >= 70){
-	grade = 'A';
-}else if(per >= 60){
-	grade = 'B';
-}else if(per < 60){
-	grade = 'Fail';
-}
-if(grade == 'A-one'){
-	remarks == 'Excellent';
-}else if(grade = 'A'){
-	remarks == 'Good';
-}else if(grade == 'B'){
-	remarks == 'You need to improve';
-}else if(grade == 'Fail'){
-	remarks = 'Sorry';
+// Task 03
+firstNum = parseInt(prompt('Enter first number: '));
+secondNum = parseInt(prompt('Enter second number: '));
+if(firstNum == secondNum){
+	alert('Both entered numbers are equal.')
+}else if(firstNum > secondNum){
+	alert(firstNum + ' is larger than ' + secondNum)
+}else if(secondNum > firstNum){
+	alert(secondNum + ' is larger than ' + firstNum)
 }
 
-document.write('<h1>Mark Sheet</h1>')
-document.write('<p>Total marks: '+ totalMarks +'<br>')
-document.write('Marks Obtained: '+ obtainedMarks +'<br>')
-document.write('Percentage: '+ per +'%<br>')
-document.write('Grade: '+ grade +'<br>')
-document.write('Remarks: ' + remarks +' </p>')
+
 
 </script>
 </body>

@@ -358,9 +358,114 @@ if("car" < "cat"){
 alert("car is smaller than cat");
 }
 
+//Task 6
+var totalMarks, obtainedMarks, per, grade, remarks;
+totalMarks = parseFloat(prompt('Enter total marks: '));
+obtainedMarks = parseFloat(prompt('Enter obtained marks: '));
+per = (100 * obtainedMarks) / totalMarks;
+if(per >= 80){
+	grade = 'A-one';
+}else if(per >= 70){
+	grade = 'A';
+}else if(per >= 60){
+	grade = 'B';
+}else if(per < 60){
+	grade = 'Fail';
+}
 
+if(grade == 'A-one'){
+	remarks = 'Excellent';
+}else if(grade = 'A'){
+	remarks = 'Good';
+}else if(grade == 'B'){
+	remarks = 'You need to improve';
+}else if(grade == 'Fail'){
+	remarks = 'Sorry';
+}
 
+document.write('<h1>Mark Sheet</h1>')
+document.write('<p>Total marks: '+ totalMarks +'<br>')
+document.write('Marks Obtained: '+ obtainedMarks +'<br>')
+document.write('Percentage: '+ Math.round((per + Number.EPSILON) * 100) / 100 +'%<br>')
+document.write('Grade: '+ grade +'<br>')
+document.write('Remarks: ' + remarks +' </p>')
 
+//Task 7
+var secret = Math.floor(Math.random() * 11);
+var num = parseInt(prompt('Enter any number between 0-10: '));
+if(secret == num){
+	alert('Bingo! Correct answer')
+}else if((num + 1) == secret){
+	alert('Close enough to the correct answer')
+}
+
+//Task 8
+var num = parseInt(prompt('Enter number: '));
+if (num % 3 == 0){
+	alert(num+ ' is divisible by 3!')
+}
+
+//Task 9
+var num = parseInt(prompt('Enter number: '));
+if(num % 2 == 0){
+	alert(num+ ' is even number!')
+}else if(Math.abs(num % 2) == 1){
+	alert(num+ ' is odd number!')
+}
+
+//Task 10
+var temp = parseInt(prompt('Enter temperature: '));
+if(temp > 40){
+	alert('It is too hot outside.')
+}else if(temp > 30){
+	alert('The Weather today is Normal.')
+}else if(temp > 20){
+	alert('Today’s Weather is cool.')
+}else if(temp > 10){
+	alert('OMG! Today’s weather is so Cool.')
+}
+
+//Task 11
+var firstNum, secondNum, opr, result;
+firstNum = parseInt(prompt('Enter first number: '));
+secondNum = parseInt(prompt('Enter second number: '));
+opr = prompt('Enter operation: ');
+if(opr == '+'){
+	result = firstNum + secondNum;
+}else if(opr == '-'){
+	result = firstNum - secondNum;
+}else if(opr == '*'){
+	result = firstNum * secondNum;
+}else if(opr == '/'){
+	result = firstNum / secondNum;
+}else if(opr == '%'){
+	result = firstNum % secondNum;
+}
+alert('Result: '+result)
+
+// Chapter 12-13
+// Task 01
+var input = prompt('Enter character: ');
+if(/^[A-Z]$/i.test(input)){
+	if(input == input.toUpperCase()){
+		alert(input + ' is uppercase letter!')
+	}else if(input == input.toLowerCase()){
+		alert(input + ' is lowercase letter!')
+	}
+}else if(/^\d+$/.test(input)){
+	alert(input + ' is number!')
+}
+
+// Task 02
+firstNum = parseInt(prompt('Enter first number: '));
+secondNum = parseInt(prompt('Enter second number: '));
+if(firstNum == secondNum){
+	alert('Both entered numbers are equal.')
+}else if(firstNum > secondNum){
+	alert(firstNum + ' is larger than ' + secondNum)
+}else if(secondNum > firstNum){
+	alert(secondNum + ' is larger than ' + firstNum)
+}
 
 
 
