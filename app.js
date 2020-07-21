@@ -467,6 +467,44 @@ if(firstNum == secondNum){
 	alert(secondNum + ' is larger than ' + firstNum)
 }
 
+// Task 03
+num = parseInt(prompt('Enter number: '));
+if(num == 0){
+	alert('Entered number is zero')
+}else if(num > 0){
+	alert(num + ' is positive')
+}else if(num < 0){
+	alert(num + ' is negative')
+}
+
+// Task 04
+str = prompt('Enter letter: ');
+if(/^[aeiou]$/.test(str.toLowerCase())){
+	alert('true');
+}else{
+	alert('false')
+}
+
+// Task 05
+var orgPassword = 'password';
+password = prompt('Enter password: ');
+if(orgPassword == password){
+	alert('Correct! The password you entered matches the original password');
+}else if(!password){
+	alert('Please enter your password')
+}else{
+	alert('Incorrect password')
+}
+
+// Task 06
+var greeting;
+var hour = 13;
+if (hour < 18) {
+	greeting = "Good day";
+}else{
+	greeting = "Good evening";
+}
+
 
 
 
