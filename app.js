@@ -505,6 +505,40 @@ if (hour < 18) {
 	greeting = "Good evening";
 }
 
+// Task 07
+time = prompt('Enter time: ');
+if(time >= 0 && time < 1200){
+	alert('Good Morning!');
+}else if(time >= 1200 && time < 1700){
+	alert('Good Afternoon!')
+}else if(time >= 1700 && time < 2100){
+	alert('Good Evening!')
+}else if(time >= 2100 && time <= 2359){
+	alert('Good Night!')
+}else{
+	alert('Invalid input, please try again!')
+}
+
+// Chapter 14-16
+// Task 01
+students = [];
+
+// Task 02
+students = new Array();
+
+// Task 03
+students = [];
+students = ["Ahmad", "Farooq", "Bakar", "Waqas"];
+
+// Task 04
+studentIDs = [];
+studentIDs = [5,7,9,11];
+
+// Task 05
+studentData = [];
+studentData = [5,"Ahmad",7,"Farooq",9,"Ali",11,"Imran"];
+
+
 
 
 
