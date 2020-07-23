@@ -536,7 +536,38 @@ studentIDs = [5,7,9,11];
 
 // Task 05
 studentData = [];
+studentData = [false,true];
+
+// Task 06
+studentData = [];
 studentData = [5,"Ahmad",7,"Farooq",9,"Ali",11,"Imran"];
+
+// Task 07
+degree = [];
+degree = [ 'SSC', 'HSC', 'BCS', 'BS', 'BCOM', 'MS', 'M. Phil.', 'PhD'];
+count = 1;
+document.write('<h2>Qualifications:</h2>');
+degree.forEach(function(element) { 
+	document.write(count+') '+element+'<br>');
+	count++;
+});
+
+// Task 08
+var students = [], score = [], per;
+for (i=1; i <= 3; i++) {
+	students.push(prompt('Enter Name of Student#'+i));
+}
+for (i=1; i <= 3; i++) {
+	score.push(parseFloat(prompt('Enter Score of Student#'+i)));
+}
+for (var i=0; i < students.length; i++) {
+  	per = (100 * score[i]) / 500;
+  	document.write('Score of '+students[i]+' is '+score[i]+'. Percentage is '+per+'%<br>');
+}
+
+
+
+
 
 
 

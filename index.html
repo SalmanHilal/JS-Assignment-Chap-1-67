@@ -10,9 +10,22 @@
 
 <script>
 
-// Task 05
-studentData = [];
-studentData = [5,"Ahmad",7,"Farooq",9,"Ali",11,"Imran"];
+// Task 08
+var colors = ['red','green','blue'];
+function displayColors(title='Colors:'){
+	document.write('<h1>' + title + '</h1>');
+	for (i=1; i <= colors.length; i++) {
+		document.write(i+') '+colors[i-1]+'<br>');
+	}
+	document.write('<br>');
+}
+displayColors('Colors:')
+
+colors.unshift(prompt('Add color at begining of list: '));
+displayColors('Colors list after adding color at begining:')
+
+colors.push(prompt('Add color at end of list: '));
+displayColors('Colors list after adding color at end:')
 
 
 
