@@ -649,6 +649,35 @@ for (i=1; i <= phones.length; i++) {
 }
 document.write('</select>');
 
+// Chapter 17-20
+// Task 01
+var students = [];
+students = [
+   ["ABC", 24, 18000],
+   ["EFG", 30, 30000],
+   ["IJK", 28, 41000],
+   ["EFG", 31, 28000],
+];
+
+// Task 02
+var arr = [];
+arr = [
+   [0,1,2,3],
+   [1,0,1,2],
+   [2,1,0,1]
+];
+
+// Task 03
+for(var i of [1,2,3,4,5,6,7,8,9,10]) document.write(i+'<br>');
+
+// Task 04
+var no = parseInt(prompt('Generate multiplication table of: '));
+var lenght = parseInt(prompt('Enter lenght for table: '));
+document.write('Table of: '+no+'<br>Lenght: '+lenght+'<br>')
+for(i=1;i<=lenght;i++){
+	result = i*no;
+	document.write(no+' x '+i+' = '+ result+'<br>');
+}
 
 
 
