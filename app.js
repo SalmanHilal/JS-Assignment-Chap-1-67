@@ -565,10 +565,89 @@ for (var i=0; i < students.length; i++) {
   	document.write('Score of '+students[i]+' is '+score[i]+'. Percentage is '+per+'%<br>');
 }
 
+// Task 09
+var colors = ['red','green','blue'];
+function displayColors(title='Colors:'){
+	document.write('<h1>' + title + '</h1>');
+	for (i=1; i <= colors.length; i++) {
+		document.write(i+') '+colors[i-1]+'<br>');
+	}
+	document.write('<br>');
+}
+displayColors('Colors:')
 
+colors.unshift(prompt('Add color at begining of list: '));
+displayColors('Colors list after adding color at begining:')
 
+colors.push(prompt('Add color at end of list: '));
+displayColors('Colors list after adding color at end:')
 
+// Task 10
+var scores = [];
+function displayList(title='Scores:',isSorted){
+	if(isSorted == 1){
+		scores.sort();
+	}
+	document.write('<b>' + title + '</b>');
+	for (i=1; i <= scores.length; i++) {
+		document.write(scores[i-1]);
+		document.write(i < scores.length?', ':'.');
+	}
+	document.write('<br>');
+}
 
+scores.push(prompt('Add students score: '));
+scores.push(prompt('Add students score: '));
+scores.push(prompt('Add students score: '));
+scores.push(prompt('Add students score: '));
+displayList('Scores of students: ',0)
+displayList('Ordered Scores of students: ',1)
+
+// Task 11
+var cities = ['Karachi','Lahore','Islamabad','Quetta','Peshawar', 'Hyderabad'];
+document.write('<b>Cities list:</b> ');
+for (i=1; i <= cities.length; i++) {
+	document.write(cities[i-1]);
+	document.write(i < cities.length?', ':'.');
+}
+document.write('<br>');
+var selectedCities = cities.slice(2,5);
+document.write('<b>Selected cities list:</b> ');
+for (i=1; i <= selectedCities.length; i++) {
+	document.write(selectedCities[i-1]);
+	document.write(i < selectedCities.length?', ':'.');
+}
+document.write('<br>');
+
+// Task 12
+var arr = ['This', 'is', 'my', 'cat'];
+document.write('<b>Array:</b><br>' + arr + '<br>' )
+document.write('<b>String:</b><br>' )
+document.write(arr.join().replace(/,/g, ' '));
+
+// Task 13
+var arr = [' Keyboard',   ' Mouse', ' LCD', ' Speakers'];
+document.write('<b>Devices</b><br>' + arr +'<br>')
+for (i=1; i <= arr.length; i++) {
+	document.write('<b>Out</b><br>'+arr[i-1]);
+	document.write(i < arr.length?'<br> ':'.');
+}
+
+// Task 14
+var arr = [' Keyboard',   ' Mouse', ' LCD', ' Speakers'];
+document.write('<b>Devices</b><br>' + arr +'<br>')
+for (i=arr.length; i >= 1; i--) {
+	document.write('<b>Out</b><br>'+arr[i-1]);
+	document.write(i > 0?'<br> ':'.');
+}
+
+// Task 15
+var phones = ['Nokia','Samsung','Haier','Apple','Motorolla','Sony'];
+document.write('<select>');
+for (i=1; i <= phones.length; i++) {
+	document.write('<option>'+phones[i-1]+'</option>');
+}
+document.write('</select>');
 
 
 
