@@ -1091,3 +1091,44 @@ function findletter(str,letter){
 
 }
 findletter('JSResourceS.com','J')
+
+//Chapter 38-42
+// Task 01
+function power(a,b){
+	document.write(Math.pow(a, b))
+}
+power(2,3)
+
+// Task 02
+function leapYear(year)
+{
+  document.write((((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))? year + ' is leap year.': year + ' is not a leap year.' );
+}
+leapYear(prompt('Enter year: '))
+
+// Task 03
+function triangle(a,b,c){
+	var s = getS(a,b,c);
+	console.log(s)
+	var area = 0;
+	area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+	document.write(area);
+}
+function getS(a,b,c){
+	return ( a + b + c ) / 2;
+}
+triangle(10,15,11)
+
+// Task 04
+function mainFunction(sub1,sub2,sub3){
+	console.log(avg(sub1,sub2,sub3))
+	document.write('<b>Students Marks: </b>'+ (sub1+sub2+sub3) + '/300 <br><b>Percentage: </b>' + per(sub1,sub2,sub3) + '<br><b>Average: </b>' + avg(sub1,sub2,sub3))
+}
+function avg(sub1,sub2,sub3){
+	return Math.round((((sub1+sub2+sub3)/3 ) * 100) / 100);
+}
+function per(sub1,sub2,sub3){
+	return Math.round(((100 * (sub1+sub2+sub3)) / 300) * 100) / 100;
+}
+mainFunction(75,80,95)
+

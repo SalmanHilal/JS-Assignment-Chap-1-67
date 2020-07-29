@@ -10,10 +10,18 @@
 
 <script>
 
-// Task 07
-for (k=5; k <= 100; k= k+5) {
-	document.write(k + (k < 100 ?', ':'.'));
+// Task 05
+var needle = 'le'
+var re = new RegExp(needle,'gi');
+var haystack = 'I learned to play the Ukulele';
+
+var results = new Array();//this is the results you want
+while (re.exec(haystack)){
+  results.push(re.lastIndex);
 }
+
+
+
 
 
 </script>
