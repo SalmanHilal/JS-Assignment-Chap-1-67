@@ -1132,3 +1132,93 @@ function per(sub1,sub2,sub3){
 }
 mainFunction(75,80,95)
 
+// Task 05
+var string = "This is a string";
+var char = "a";
+var index;
+for (i = 0; i < string.length; i++) {
+  if (string[i] == char) {
+    index = i;
+    break;
+  }
+}
+document.write(index);
+
+// Task 06
+function removeVowels(str) {
+  document.write( str.replace(/[aeiou]/gi, ''));
+}
+removeVowels('This is a sentence have some vowels!')
+
+// Task 07
+function findOccurrences() {
+  var str = "Pleases read this application and give me gratuity";
+  var count = 0;
+  let haveSeenVowel = false;
+  for (const letter of str.toLowerCase()) {
+    switch (letter) {
+      case 'a':
+      case 'e':
+      case 'i':
+      case 'o':
+      case 'u':
+        {
+          if (haveSeenVowel) {
+            count++;
+            haveSeenVowel = false;
+          } else {
+            haveSeenVowel = true;
+          }
+          break;
+        }
+      default:
+        haveSeenVowel = false
+    }
+  }
+
+  return count
+}
+console.log(findOccurrences());
+
+// Task 08
+var distance = parseFloat(prompt('Enter distance between cities: '))
+function meters(distance){
+	document.write('<p>' + distance + 'km in meters: ' + (distance *1000) + '</p>');
+}
+function feet(distance){
+	document.write('<p>' + distance + 'km in feet: ' + (distance * 3280.8398950131) + '</p>');
+}
+function inches(distance){
+	document.write('<p>' + distance + 'km in inches: ' + (distance * 39370) + '</p>');
+}
+function cm(distance){
+	document.write('<p>' + distance + 'km in cm: ' + (distance * 100000) + '</p>');
+}
+function getConvertedValues(distance){
+	meters(distance)
+	feet(distance)
+	inches(distance)
+	cm(distance)
+}
+getConvertedValues(distance)
+
+// Task 09
+function overtime(){
+	var hours = parseFloat(prompt('Enter total working hours: '))
+	if(hours > 40){
+		document.write('Overtime is: ' + ((hours - 40) * 12) + ' Rs');
+	}else{
+		document.write('Overtime not applicable!');
+	}
+}
+overtime()
+
+// Task 10
+function cashier(){
+	var amount = parseInt(prompt('Enter total working hours: '))
+	document.write(" You will have " + Math.round((amount / 100 -1)) + ' hundred notes,' + Math.round(((amount % 100) / 50 -1)) + ' fifty notes and ' + Math.round((((amount % 100) % 50) / 10 -1)) + ' ten notes.');
+	document.write(" Amount still remaining Rs. : ", (((amount % 100) % 50) % 10));
+}
+cashier()
+
+// Chapter 43-48
