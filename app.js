@@ -679,9 +679,83 @@ for(i=1;i<=lenght;i++){
 	document.write(no+' x '+i+' = '+ result+'<br>');
 }
 
+// Task 05
+fruits = ['apple', 'banana', 'mango', 'orange','strawberry'];
+for (i=1; i <= fruits.length; i++) {
+	document.write(fruits[i-1]+'<br>');
+}
+document.write('<br>');
+for (i=1; i <= fruits.length; i++) {
+	document.write('Element at index '+(i-1)+' is '+fruits[i-1]+'<br>');
+}
 
+// Task 06
+document.write('<p><b>Counting: </b>');
+for (i=1; i <= 15; i++) {
+	document.write(i + (i < 15?', ':'.</p>'));
+}
+document.write('<p><b>Reverse Counting: </b>');
+for (j=10; j >= 1; j--) {
+	document.write(j + (j > 1 ?', ':'.</p>'));
+}
+document.write('<p><b>Even: </b>');
+for (k=0; k <= 20; k= k+2) {
+	document.write(k + (k < 20 ?', ':'.</p>'));
+}
+document.write('<p><b>Odd: </b>');
+for (k=1; k <= 20; k= k+2) {
+	document.write(k + (k < 19 ?', ':'.</p>'));
+}
+document.write('<p><b>Series: </b>');
+for (k=2; k <= 20; k= k+2) {
+	document.write(k + (k < 19 ?'k, ':'k.</p>'));
+}
 
+// Task 07
+A = ['cake', 'apple pie', 'cookie', 'chips', 'patties'];
+input = prompt('Welcome to ABC bakery! what do you want to order?: ');
+isFound = 0;
+for (i=0; i <= A.length; i++) {
+	if(input == A[i]){
+		alert(A[i] + ' is avalaible at index ' + i + ' in our bakery.');
+		isFound = 1;
+	}
+}
+if (isFound == 0) {
+	alert('We are sorry '+ input + ' is not avalaible in our bakery!')
+}
 
+// Task 08
+A = [24, 53, 78, 91, 12];
+var largest= 0;
+document.write('<b>Array items: </b> ');
+for (i=0; i<=A.length;i++){
+	document.write(A[i]);
+	document.write(i < A.length?', ':'.<br>');
+    if (A[i]>largest) {
+        largest=A[i];
+    }
+}
+document.write('<b>The Largest Number is: </b>'+ largest);
+
+// Task 09
+A = [24, 53, 78, 91, 12];
+var minvalue = A[0]; 
+document.write('<b>Array items: </b> ');
+for (i=0; i<=A.length;i++){
+	document.write(A[i]);
+	document.write(i < A.length?', ':'.<br>');
+    if(A[i]<minvalue)
+    {
+        minvalue = A[i];
+    }
+}
+document.write('<b>The Smallest Number is: </b>'+ minvalue);
+
+// Task 10
+for (k=5; k <= 100; k= k+5) {
+	document.write(k + (k < 100 ?', ':'.'));
+}
 
 // Chapter 21-25
 // Task 01
