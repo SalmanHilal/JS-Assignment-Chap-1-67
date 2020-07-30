@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chap 58-67 | Salman Ahmed</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+</style>
+<body>
+<div class="container-fluid py-4">
+	<div class="row ">
+		<div class="col-sm-10 mx-auto py-5">
+			<h1> DOM </h1>
+		   <div id="form-content" class="content">
+		      <label for="first-name">First Name</label>
+		      <input type="text" id="first-name" />
+		      <label for="last-name">Last Name</label>
+		      <input type="text" id="last-name" />
+		      <label for="email">Email</label>
+		      <input type="text" id="email" />
+		   </div>
+		   <div id="main-content" class="content">
+		      <p class="render"> First Name : Alex</p>
+		      <p class="render" id="lastName">Last Name: Bank</p>
+		      <p class="render"> Email : alexbank@example.com</p>
+		      <p class="render"> Country : Pakistan </p>
+		      <p class="render"> contact : +92 300 1234567</p>
+		   </div>
+		</div>
+	</div>
+	<div class="row ">
+		<div class="col-sm-10 mx-auto py-4" id="results">
+		</div>
+	</div>
+	<div class="row ">
+		<div class="col-sm-10 mx-auto py-4" id="results2">
+		</div>
+	</div>
+</div>
+
+<script>
+//chap 58-67
+//Task 01 i
+var mianContent = document.getElementById('main-content');
+// ii
+document.getElementById("results").insertAdjacentHTML("beforeend", mianContent.innerHTML);
+// iii
+arr = document.getElementsByClassName("render");
+for(i=0;i < arr.length;i++){
+	document.getElementById("results").insertAdjacentHTML("beforeend", '<p>'+arr[i].innerHTML+'</p>');
+}
+// iv
+document.getElementById("first-name").value = 'Ahamd';
+// v
+document.getElementById("last-name").value = 'Ali';
+document.getElementById("email").value = 'ahmad.ali@pakistan.net';
+
+// Task 02 i
+var nodeName = document.getElementById('main-content').nodeName;
+document.getElementById("results2").insertAdjacentHTML("beforeend", nodeName);
+// ii
+var nodeName2 = '<p>'+document.getElementById('lastName').nodeName+'</p>';
+document.getElementById("results2").insertAdjacentHTML("beforeend", nodeName2);
+// iii
+document.getElementById('lastName').innerHTML = 'NATIONAL BANK';
+// iv
+var firstchild = '<p>'+document.getElementById("main-content").firstChild+'</p>';
+var lastchild = '<p>'+document.getElementById("main-content").lastChild+'</p>';
+document.getElementById("results2").insertAdjacentHTML("beforeend", firstchild);
+document.getElementById("results2").insertAdjacentHTML("beforeend", lastchild);
+// v
+var next = '<p>'+document.getElementById("lastName").nextElementSibling.innerHTML+'</p>';
+var previous = '<p>'+document.getElementById("lastName").previousElementSibling.innerHTML+'</p>';
+document.getElementById("results2").insertAdjacentHTML("beforeend", next);
+document.getElementById("results2").insertAdjacentHTML("beforeend", previous);
+// vi
+var parent = '<p>'+document.getElementById("email").parentElement+'</p>';;
+var parenttype = '<p>'+document.getElementById("email").parentElement.nodeName+'</p>';;
+document.getElementById("results2").insertAdjacentHTML("beforeend", parent);
+document.getElementById("results2").insertAdjacentHTML("beforeend", parenttype);
+
+
+
+</script>
+</body>
+</html>
