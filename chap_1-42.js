@@ -1220,5 +1220,3 @@ function cashier(){
 	document.write(" Amount still remaining Rs. : ", (((amount % 100) % 50) % 10));
 }
 cashier()
-
-// Chapter 43-48

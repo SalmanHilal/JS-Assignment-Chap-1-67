@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chap 43-48 | Salman Ahmed</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+.card{
+	transition: 0.3s
+}
+.card:hover{
+	cursor:pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+</style>
+<body>
+<div class="container py-4">
+	<p>
+		<a href="#" onClick="alert('alert on click!')" class="btn btn-primary">Show alert</a>
+	</p>
+
+	<div class="row">
+		<div class="col-sm-12 col-md-6 col-lg-4">
+			<div class="card" style="width: 18rem;" onClick="myFunction()" >
+			  <img class="card-img-top" src="assets/nokia-3310.jpg" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title">Nokia 3310</h5>
+			    <p class="card-text">Nokia is an innovative global leader in 5G, networks and phones. See how we create the technology to connect the world.</p>
+			  </div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6 col-lg-4">
+			<div class="card" style="width: 18rem;" onClick="myFunction()" >
+			  <img class="card-img-top" src="assets/nokia-230.jpg" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title">Nokia 230</h5>
+			    <p class="card-text">Nokia is an innovative global leader in 5G, networks and phones. See how we create the technology to connect the world.</p>
+			  </div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6 col-lg-4">
+			<div class="card" style="width: 18rem;" onClick="myFunction()" >
+			  <img class="card-img-top" src="assets/nokia-6.jpg" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title">Nokia 6</h5>
+			    <p class="card-text">Nokia is an innovative global leader in 5G, networks and phones. See how we create the technology to connect the world.</p>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<table class="table">
+				<thead>
+					<th>Index</th>
+					<th>Student Name</th>
+					<th>Class</th>
+					<th>Action</th>
+				</thead>
+				<tbody id="tbody">
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<img src="assets/nokia-230.jpg" class="w-100" onmouseover="changeImg(this)" onmouseout="resetImg(this)">
+		</div>
+		<div class="col-sm-6 text-center">
+			<h2>Counter</h2>
+			<input type="text" id="counter" value="0" class="d-block border-0 mx-auto h3 text-center" />
+			<button class="btn btn-primary" onclick="incCounter(counter)">&uArr;</button>
+			<button class="btn btn-primary" onclick="decCounter(counter)">&dArr;</button>
+		</div>
+	</div>
+</div>
+
+
+<script>
+//chap 43-48 
+//Task 01 inline JS
+
+//Task 02
+function myFunction() {
+  alert('Thanks for purchasing this item!')
+}
+//Task 03
+students = [
+	['Ahmad','I'],
+	['Zaid','II'],
+	['Bakr','III'],
+	['Farooq','IV'],
+	['Haider','V'],
+	['Mughal','VI'],
+	['Furqan','VII'],
+	['Farhan','VIII'],
+	['Usman','IX'],
+	['Salman','X'],
+	['Kashan','XI']
+];
+function remove(array, element) {
+  const index = array.indexOf(element);
+  array.splice(index, 1);
+}
+function showData(students){
+	var data = '';
+	for (i=0; i < students.length; i++) {
+		data += '<tr><td>'+i+'</td><td>'+students[i][0]+'</td><td>'+students[i][1]+'</td><td><button class="btn btn-danger" onClick="deleteRecord(this)" data-id="'+i+'">Delete</button></td></tr>';
+	}
+	document.getElementById("tbody").innerHTML = data; 
+}
+showData(students);
+function deleteRecord(d){
+	var dataID = d.getAttribute("data-id");
+	//delete students[dataID];
+	remove(students, dataID)
+	showData(students)
+}
+//Task 04
+function changeImg(x) {
+  x.src = "assets/nokia-3310.jpg";
+}
+function resetImg(x) {
+  x.src = "assets/nokia-230.jpg";
+}
+
+//Task 05
+counter = 0;
+function updateCounter(counter){
+	document.getElementById("counter").innerHTML = counter; 
+}
+updateCounter(counter)
+function incCounter(){
+    var counter = parseInt(document.getElementById('counter').value, 10);
+    counter = isNaN(counter) ? 0 : counter;
+    counter++;
+    document.getElementById('counter').value = counter;
+}
+function decCounter(){
+    var counter = parseInt(document.getElementById('counter').value, 10);
+    counter = isNaN(counter) ? 0 : counter;
+    counter--;
+    document.getElementById('counter').value = counter;
+}
+</script>
+</body>
+</html>
